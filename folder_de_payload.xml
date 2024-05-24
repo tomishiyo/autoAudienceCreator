@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <s:Header>
+        <a:Action s:mustUnderstand="1">Create</a:Action>
+        <a:To s:mustUnderstand="1">https://SUBDOMAIN.soap.marketingcloudapis.com/Service.asmx</a:To>
+        <fueloauth xmlns="http://exacttarget.com">OAUTH_TOKEN</fueloauth>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <CreateRequest xmlns="http://exacttarget.com/wsdl/partnerAPI">
+			<ns1:Objects
+				xmlns:ns1="http://exacttarget.com/wsdl/partnerAPI" xsi:type="ns1:DataFolder">
+				<ns1:ModifiedDate xsi:nil="true"/>
+				<ns1:ObjectID xsi:nil="true"/>
+				<ns1:CustomerKey>DE_FOLDER_NAME</ns1:CustomerKey>
+				<ns1:ParentFolder>
+					<ns1:ModifiedDate xsi:nil="true"/>
+					<ns1:ID>PARENT_FOLDER_ID</ns1:ID>
+					<ns1:ObjectID xsi:nil="true"/>
+				</ns1:ParentFolder>
+				<ns1:Name>DE_FOLDER_NAME</ns1:Name>
+				<ns1:Description>DE_FOLDER_NAME</ns1:Description>
+				<ns1:ContentType>shared_dataextension</ns1:ContentType>
+				<ns1:IsActive>true</ns1:IsActive>
+				<ns1:IsEditable>true</ns1:IsEditable>
+				<ns1:AllowChildren>true</ns1:AllowChildren>
+			</ns1:Objects>
+        </CreateRequest>
+    </s:Body>
+</s:Envelope>
