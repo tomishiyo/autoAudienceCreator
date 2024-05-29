@@ -1,0 +1,6 @@
+# Data extension parent folder ID
+YOUR PARENT FOLDER ID HERE
+# Campaign name code
+20240528_PYTHON-DEMO
+# Language versions (can be 1 or 2)
+2

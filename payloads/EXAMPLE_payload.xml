@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <s:Header>
+        <a:Action s:mustUnderstand="1">Create</a:Action>
+        <a:To s:mustUnderstand="1">https://SUBDOMAIN.soap.marketingcloudapis.com/Service.asmx</a:To>
+        <fueloauth xmlns="http://exacttarget.com">OAUTH_TOKEN</fueloauth>
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <CreateRequest xmlns="http://exacttarget.com/wsdl/partnerAPI">
+            <Objects xsi:type="DataExtension">
+                <CustomerKey>DE_NAME</CustomerKey>
+                <CategoryID>FOLDER_ID</CategoryID>
+                <Name>DE_NAME</Name>
+                <IsSendable>SENDABLE_STATUS</IsSendable>
+                <DataRetentionPeriod>Months</DataRetentionPeriod>
+                <DataRetentionPeriodLength>6</DataRetentionPeriodLength>
+                <RowBasedRetention>false</RowBasedRetention>
+                <ResetRetentionPeriodOnImport>false</ResetRetentionPeriodOnImport>
+                <DeleteAtEndOfRetentionPeriod>false</DeleteAtEndOfRetentionPeriod>
+                <SendableDataExtensionField>
+                    <CustomerKey>SubscriberKey</CustomerKey>
+                    <Name>SubscriberKey</Name>
+                    <FieldType>Text</FieldType>
+                </SendableDataExtensionField>
+                <SendableSubscriberField>
+                    <Name>Subscriber Key</Name>
+                    <Value></Value>
+                </SendableSubscriberField>
+                <Fields>
+                    <Field>
+                        <CustomerKey>Field1</CustomerKey>
+                        <Name>SubscriberKey</Name>
+                        <FieldType>Text</FieldType>
+                        <MaxLength>255</MaxLength>
+                        <IsRequired>true</IsRequired>
+                        <IsPrimaryKey>true</IsPrimaryKey>
+                    </Field>
+                    <Field>
+                        <CustomerKey>Field12</CustomerKey>
+                        <Name>EmailAddress</Name>
+                        <FieldType>EmailAddress</FieldType>
+                        <IsRequired>true</IsRequired>
+                        <IsPrimaryKey>false</IsPrimaryKey>
+                    </Field>
+                    <Field>
+                        <CustomerKey>Field3</CustomerKey>
+                        <Name>FirstName</Name>
+                        <FieldType>Text</FieldType>
+                        <MaxLength>75</MaxLength>
+                        <IsRequired>false</IsRequired>
+                        <IsPrimaryKey>false</IsPrimaryKey>
+                    </Field>
+                    <Field>
+                        <CustomerKey>Field4</CustomerKey>
+                        <Name>ActiveLoyalty</Name>
+                        <FieldType>Text</FieldType>
+                        <MaxLength>75</MaxLength>
+                        <IsRequired>true</IsRequired>
+                        <IsPrimaryKey>false</IsPrimaryKey>
+                    </Field>
+                </Fields>
+            </Objects>
+        </CreateRequest>
+    </s:Body>
+</s:Envelope>

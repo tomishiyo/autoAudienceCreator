@@ -1,8 +1,10 @@
-/backup.py
+/backups/backup.py
 /credentials.txt
 /.venv/
 /.idea/
 /inputs.txt
-/inputs.txt
 /__pycache__/
 /tests/
+/backups/
+/payloads/de_payload.xml
+/payloads/qa_de_payload.xml
